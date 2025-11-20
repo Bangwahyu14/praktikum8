@@ -30,4 +30,45 @@ fun TampilData(
                 )
             )
         }
-    )
+    ){ isiRuang ->
+        Column(
+            modifier = Modifier
+                .padding(isiRuang)
+                .padding(20.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            Text("Nama Lengkap:", fontSize = 16.sp)
+            Text(
+                text = nama ?: "-",
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.Cursive,
+                fontSize = 22.sp
+            )
+
+            Text("Jenis Kelamin:", fontSize = 16.sp)
+            Text(
+                text = jenisKelamin ?: "-",
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.Cursive,
+                fontSize = 22.sp
+            )
+
+            Text("Alamat:", fontSize = 16.sp)
+            Text(
+                text = alamat ?: "-",
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.Cursive,
+                fontSize = 22.sp
+            )
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            Button(
+                modifier = Modifier.fillMaxWidth(),
+                onClick = { navController.navigate("Beranda") }
+            ) {
+                Text(text = "Kembali ke Beranda")
+            }
+        }
+    }
+}
