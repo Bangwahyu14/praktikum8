@@ -35,8 +35,8 @@ fun Beranda(
             contentScale = ContentScale.Fit
         )
         Spacer(modifier = Modifier.height(16.dp))
-        Text(text = "Farhat Asharfillah", fontSize = 20.sp)
-        Text(text = "20230140093", fontSize = 16.sp)
+        Text(text = "wahyu agung p", fontSize = 20.sp)
+        Text(text = "20230140068", fontSize = 16.sp)
         Spacer(modifier = Modifier.height(32.dp))
         Button(onClick = onSubmitClick) {
             Text(text = "Submit")
