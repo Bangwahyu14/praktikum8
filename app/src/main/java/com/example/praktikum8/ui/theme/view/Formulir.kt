@@ -49,3 +49,45 @@ fun FormIsian(
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth()
             )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Text(text = "Jenis Kelamin")
+            Row {
+                jenisKList.forEach { item ->
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(
+                            selected = jenisKelamin == item,
+                            onClick = { jenisKelamin = item }
+                        )
+                        Text(text = item)
+                        Spacer(modifier = Modifier.width(10.dp))
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            OutlinedTextField(
+                value = alamat,
+                onValueChange = { alamat = it },
+                label = { Text("Alamat") },
+                singleLine = false,
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
+
+            Button(
+                modifier = Modifier.fillMaxWidth(),
+                onClick = {
+                    navController.navigate(
+                        "Detail/${nama}/${jenisKelamin}/${alamat}"
+                    )
+                }
+            ) {
+                Text(text = stringResource(id = R.string.submit))
+            }
+        }
+    }
+}
