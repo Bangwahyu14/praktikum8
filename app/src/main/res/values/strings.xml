@@ -6,5 +6,9 @@
     <string name="jenis_kelamin">JENIS KELAMIN</string>
     <string name="alamat">ALAMAT</string>
     <string name="tampil">Tampilan Data</string>
-    <string name="home">Form Isian</string>
+    <string name="home">Fosm Isian</string>
+    <string name="laki">Laki-laki</string>
+    <string name="wanita">Perempuan</string>
+    <string name="detail">Data Siswa</string>
+
 </resources>
