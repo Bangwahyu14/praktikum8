@@ -13,7 +13,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.praktikum8.R
 
-private val Unit.drawable: Any
 
 @Composable
 fun Beranda(
